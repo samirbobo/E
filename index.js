@@ -21,7 +21,7 @@ let faildApi = false;
 
 function showDataDisplay() {
   dataLocation.style.display = "flex";
-  daysWeather.style.display = "grid";
+  // daysWeather.style.display = "grid";
   dateOfLocation.style.display = "block";
 }
 
@@ -234,7 +234,8 @@ function findMyState() {
 
 btnOk.addEventListener("click", () => {
   overlayBody.style.display = "none";
-  navLinks.style.display = "none";
+  // navLinks.style.display = "none";
+  note.style.display = "none";
   navbarToggler.style.display = "none";
   findMyState();
 });

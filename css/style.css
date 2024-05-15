@@ -32,8 +32,26 @@ body {
   font-family: "Poppins", sans-serif;
 }
 .container {
-  padding: 0 1rem;
+  padding: 0 15px;
   margin: 0 auto;
+}
+/* Small Screen */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Mediam Screen */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large Screen */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
 }
 
 /* start overlay body */
@@ -218,7 +236,7 @@ nav {
 
 /* start info weather section */
 .info-weather {
-  width: 95vw;
+  width: 94vw;
   max-width: 700px;
   margin: 3rem auto;
   text-align: center;
@@ -361,10 +379,11 @@ form {
   width: 90vw;
   margin: 2rem auto;
   text-transform: capitalize;
+  padding-bottom: 1rem;
 }
 .days-weather .countainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+  /* grid-template-columns: repeat(auto-fill, minmax(325px, 1fr)); */
   gap: 12px;
 }
 .day {
@@ -398,7 +417,11 @@ form {
 .temp p {
   margin-bottom: 0;
 }
-
+@media (min-width: 480px) {
+  .days-weather .countainer {
+    grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+  }
+}
 /* start anmation */
 @keyframes mov {
   0% {
@@ -409,5 +432,178 @@ form {
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+/* Start header Section */
+.header-section {
+  background: linear-gradient(#00000080, #0000004d);
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+.header-section img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  transition: all 0.25s ease-in-out;
+  z-index: -1;
+}
+.header-section h2 {
+  font-size: 3rem;
+  margin-top: 1rem;
+  text-align: center;
+  transition: 0.3s linear;
+}
+.header-section .center {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+button.learn-more {
+  min-width: 150px;
+  background: #1a3260;
+  border: 1px solid #03045e;
+  border-radius: 10px;
+  display: flex;
+  overflow: hidden;
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: all 0.5s ease-in;
+  z-index: 1;
+  cursor: pointer;
+}
+button.learn-more:hover:after,
+button.learn-more:hover:before {
+  width: 58%;
+}
+button.learn-more:before {
+  background: #1a3260;
+  left: -10px;
+}
+button.learn-more:after,
+button.learn-more:before {
+  content: "";
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transform: skew(15deg);
+  transition: all 0.5s;
+  width: 0;
+  z-index: -1;
+}
+button.learn-more a {
+  width: 100%;
+}
+button.learn-more:hover span {
+  color: #fff;
+  transition: 0.3s;
+}
+button.learn-more span {
+  color: #fff;
+  font-size: 18px;
+  transition: all 0.3s ease-in;
+}
+button.learn-more:after {
+  background: #4590b8;
+  right: -10px;
+}
+.about {
+  background: white;
+  color: black;
+  padding: 5rem 0;
+}
+.main-heading {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 2px solid black;
+  width: fit-content;
+  margin: 0 auto 80px;
+  position: relative;
+  z-index: 1;
+}
+.main-heading::before,
+.main-heading::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #1787e0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  z-index: -1;
+}
+.main-heading::before {
+  left: -30px;
+}
+.main-heading::after {
+  right: -30px;
+}
+.main-heading:hover::before {
+  animation: left-move 0.5s linear forwards;
+}
+.main-heading:hover::after {
+  animation: right-move 0.5s linear forwards;
+}
+.main-heading:hover {
+  color: white;
+  border: 2px solid white;
+  transition-delay: 0.5s;
+}
+@keyframes left-move {
+  50% {
+    left: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    left: 0;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+@keyframes right-move {
+  50% {
+    right: 0;
+    width: 12px;
+    height: 12px;
+  }
+  100% {
+    right: 0;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.container ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: disc;
+}
+.container ul li {
+  font-size: 1.5rem;
+  transition: 0.3s linear;
+}
+@media (max-width: 768px) {
+  .header-section h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .container ul li {
+    font-size: 1rem;
+  }
+  .header-section h2 {
+    font-size: 1.5rem;
   }
 }
