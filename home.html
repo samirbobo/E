@@ -19,24 +19,125 @@
     />
   </head>
   <body>
-    <section class="header-section">
-      <img src="weather-photo.jpg" alt="weather-photo" />
-      <h2>Welcome to Weather App.</h2>
-      <div class="center">
-        <button class="learn-more d-inline-block mt-3">
-          <a href="index.html"><span>continue</span></a>
-        </button>
+    <div class="overlay-body">
+      <div class="content-overlay-body">
+        <div>
+          <button class="btn-close">X</button>
+          <p>
+            Hello, this site asks for your current location to get your weather,
+            and you can search for your weather anywhere else
+          </p>
+          <div class="buttons-overlay">
+            <button class="btn-ok">OK</button>
+            <button class="btn-cancel">Cancel</button>
+          </div>
+        </div>
       </div>
+    </div>
+    <nav>
+      <div class="nav-center">
+        <div class="nav-header">
+          <h1>weather App</h1>
+          <button class="navbar-toggler">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+        <div class="links-container">
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link Home">Home</a></li>
+            <li><button class="nav-link note">Note</button></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="info-weather">
+      Seeing the weather of the whole world <br />
+      with <span>Weather App!</span>
     </section>
-    <section class="about">
-      <h2 class="main-heading">Our Team</h2>
-      <div class="container">
-        <ul>
-          <li>Mostafa Gaber</li>
-          <li>Ali Jamal</li>
-        </ul>
+    <section class="current-location">
+      <article class="date-of-location">
+        <input class="search" type="text" placeholder="Search Here" />
+        <!-- <form>
+            <input class="btn-submit" type="Submit" />
+          <div>
+            <label class="days" for="days">Choose the days:</label>
+            <select class="select-days" name="days" id="days">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+        </form> -->
+        <div class="outPut-seacrh">
+          <!-- <h2>1:40:24 pm</h2>
+          <h3>sunday july 23rd 2023</h3> -->
+        </div>
+      </article>
+      <article class="data-location">
+        <!-- <div class="icon-api">
+          <img src="http://openweathermap.org/img/w/50d.png" alt="" />
+        </div>
+        <div class="data-api">
+          <div class="header-country">
+            <h2>cairo</h2>
+            <p>haze</p>
+          </div>
+          <div class="info-country">
+            <div class="show-data">
+              <p>Clouds</p>
+              <p>0%</p>
+            </div>
+            <div class="show-data">
+              <p>humidity</p>
+              <p>74%</p>
+            </div>
+            <div class="show-data">
+              <p>Wind Speed</p>
+              <p>1.54</p>
+            </div>
+            <div class="show-data">
+              <p>Sunrise</p>
+              <p>06:07 Am</p>
+            </div>
+            <div class="show-data">
+              <p>Sunset</p>
+              <p>07:55 Pm</p>
+            </div>
+          </div>
+        </div> -->
+      </article>
+    </section>
+    <section class="days-weather">
+      <div class="countainer">
+        <!-- <article class="day">
+          <div class="header">
+            <h3>Friday</h3>
+            <img src="//cdn.weatherapi.com/weather/64x64/night/113.png" alt="">
+          </div>
+          <div class="info">
+            <div class="temp">
+              <p>max-temp: 25c</p>
+              <p>min-temp: 20c</p>
+            </div>
+            <p>humidity: 10</p>
+            <p>cloudy: 10</p>
+            <p>Sunny</p> 
+            <div class="sun">
+              <p>"sunrise": "05:11 AM"</p>
+              <p>"sunset": "06:51 PM"</p>
+            </div>
+          </div>
+        </article> -->
       </div>
     </section>
     <script src="index.js"></script>
   </body>
 </html>
+
